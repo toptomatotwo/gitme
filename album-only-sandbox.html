@@ -1,0 +1,41 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/jquery-1.11.3.min.js"></script>
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <div style="position:relative;width:200px;margin:0 auto;top:100px">
+        <span class="album-only-tag">True</span>
+        <form>
+        <input type="submit" value="add to cart"/>
+    </form>
+</div>
+    <script>
+        jQuery( document ).ready(function() {
+            console.log( "ready!" );
+                $('.album-only-tag').each(function(){
+                        if($(this).text() == 'True') {
+                            alert('True!');
+                            $('input').remove(); 
+                            $('form').add("span.album-only").html('Album only');
+                        }
+                            
+                        
+                })
+            });
+
+    </script>
+    </body>
+</html>

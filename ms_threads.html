@@ -1,0 +1,134 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/jquery-1.11.4.min.js"></script>
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    
+<style type="text/css">
+label img {width:40px;height:40px;}
+div.threads-swatch-wrapper {
+    float:left;
+    font-size: 12px;
+    margin-right:10px;
+}
+</style>
+    </head>
+    <body>
+        <form>
+
+<div class="threads-swatch-wrapper"><input type="hidden" name="descriptive[69]" value="009_Emerald_stone_text"  class="swatch-descriptive-name" /><input type="radio" name="id[69]" value="3963" id="attrib-69-3963" class="threads-radio-btn" /><label class="attribsRadioButton two thread-opts" for="attrib-69-3963">009_Emerald_more_text<br /><img src="" alt="" width="260" height="320" /></label></div>
+
+<div class="threads-swatch-wrapper"><input type="hidden" name="descriptive[69]" value="032_Pearl"  class="swatch-descriptive-name" /><input type="radio" name="id[69]" value="3964" id="attrib-69-3964" class="threads-radio-btn" /><label class="attribsRadioButton two thread-opts" for="attrib-69-3964">032_Pearl<br /><img src="" alt="" width="260" height="320" /></label></div>
+
+<div class="threads-swatch-wrapper"><input type="hidden" name="descriptive[69]" value="091_Star_Yellow"  class="swatch-descriptive-name" /><input type="radio" name="id[69]" value="3965" id="attrib-69-3965" class="threads-radio-btn" /><label class="attribsRadioButton two thread-opts" for="attrib-69-3965">091_Star_Yellow<br /><img src="" alt="" width="260" height="320" /></label></div>
+
+<div class="threads-swatch-wrapper"><input type="hidden" name="descriptive[69]" value="092_Star_Pink"  class="swatch-descriptive-name" /><input type="radio" name="id[69]" value="3966" id="attrib-69-3966" class="threads-radio-btn" /><label class="attribsRadioButton two thread-opts" for="attrib-69-3966">092_Star_Pink<br /><img src="" alt="" width="260" height="320" /></label></div>
+
+<div class="threads-swatch-wrapper"><input type="hidden" name="descriptive[69]" value="2122_Curry"  class="swatch-descriptive-name" /><input type="radio" name="id[69]" value="3967" id="attrib-69-3967" class="threads-radio-btn" /><label class="attribsRadioButton two thread-opts" for="attrib-69-3967">2122_Curry<br /><img src="" alt="" width="260" height="320" /></label></div>
+
+<div class="threads-swatch-wrapper"><input type="hidden" name="descriptive[69]" value="9032_Easter_Braid"  class="swatch-descriptive-name" /><input type="radio" name="id[69]" value="3968" id="attrib-69-3968" class="threads-radio-btn" /><label class="attribsRadioButton two thread-opts" for="attrib-69-3968">9032_Easter_Braid<br /><img src="" alt="" width="260" height="320" /></label></div>
+
+<div class="threads-swatch-wrapper"><input type="hidden" name="descriptive[69]" value="9100_Sunlight"  class="swatch-descriptive-name" /><input type="radio" name="id[69]" value="3969" id="attrib-69-3969" class="threads-radio-btn" /><label class="attribsRadioButton two thread-opts" for="attrib-69-3969">9100_Sunlight<br /><img src="" alt="" width="260" height="320" /></label></div>
+
+<div class="threads-swatch-wrapper"><input type="hidden" name="descriptive[69]" value="9192_Light_Peach"  class="swatch-descriptive-name" /><input type="radio" name="id[69]" value="3970" id="attrib-69-3970" class="threads-radio-btn" /><label class="attribsRadioButton two thread-opts" for="attrib-69-3970">9192_Light_Peach<br /><img src="" alt="" width="260" height="320" /></label></div>
+
+<div class="threads-swatch-wrapper"><input type="hidden" name="descriptive[69]" value="9194_Star_Green"  class="swatch-descriptive-name" /><input type="radio" name="id[69]" value="3971" id="attrib-69-3971" class="threads-radio-btn" /><label class="attribsRadioButton two thread-opts" for="attrib-69-3971">9194_Star_Green<br /><img src="" alt="" width="260" height="320" /></label></div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+        </form>
+
+
+        <script>
+
+$('label').each(function() {
+    
+    var str = $(this).text(), img; /* image name */
+    
+    var img_str = $(this).html(); /* entire content of label including the image and <br> tag */
+    
+    var word, uh, x = [], z = 0; 
+    
+    for ( var i = 0; i < str.length; i++ ) {
+        if ( str.charAt(i) === '_' ) {
+            x[z] = i;   
+            z++;
+        }
+    }
+    //alert(x.length);
+
+    if ( img_str.search('<') != -1 ) {    
+        img = img_str.substring(img_str.search('<'), img_str.length);
+        //alert('< found?!?');
+    } else {
+        img = '';
+        //alert('< not found');
+    }
+    
+    switch(x.length) {
+        case x.length==1:
+        alert('1 dash found');
+        break;
+
+        case x.length==2:
+        alert('2 dash found');
+        break;
+    }
+    if(x.length == 1) {
+        //alert('one dash found');
+        //alert(str); 
+        uh = str.substring(x[0]+1, str.length);
+        word = uh.replace('_', ' ');
+        //alert(word);
+    }
+           
+    if ( x.length >= 2 ) {
+        newstr = str.split('_');
+        word = newstr[1] + ' ' + newstr[2];
+    }
+    if ( x.length == 3 ) {
+        newstr = str.split('_');
+        word = newstr[1] + ' ' + newstr[2];
+        //word = uh.replace('_', ' ');
+         alert(word);
+    }
+
+     /* else {
+        word = str.substring(x[1]+1, str.length);   
+    } */
+    
+    $(this).html(word + img);
+}); 
+</script>
+<script>
+
+str = '0124remove_text_here_remove';
+newstr = str.split('_');
+newstr = newstr[1] + ' ' + newstr[2];
+//alert(newstr);
+
+
+
+</script>
+    </body>
+</html>
